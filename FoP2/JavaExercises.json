@@ -139,11 +139,11 @@
       ]
     },
       {
-  "id": "H6.3",
-  "title": "De Vertaler",
-  "summary": "Implement a translation system using a dictionary class that maps Dutch words to multiple English translations, and a translator class that processes a sentence.",
-  "subjects": ["hashmap", "collections", "random", "classes", "string processing"],
-  "classes": [
+      "id": "H6.3",
+      "title": "De Vertaler",
+      "summary": "Implement a translation system using a dictionary class that maps Dutch words to multiple English translations, and a translator class that processes a sentence.",
+      "subjects": ["hashmap", "collections", "random", "classes", "string processing"],
+      "classes": [
     {
       "name": "Woordenboek",
       "description": "Represents a dictionary mapping Dutch words to lists of English translations.",
@@ -224,7 +224,77 @@
     "Do not modify String.split() behavior—assume words are space-separated.",
     "Use only Java standard library classes (e.g., HashMap, ArrayList, Random)."
   ]
-}
-
+},
+{
+  "id": "H6.4",
+  "title": "Simulatie Database",
+  "summary": "Simulate a basic relational database system managing customers and their orders, ensuring primary key and referential integrity using Java classes and HashMaps.",
+  "subjects": ["hashmap", "collections", "classes", "integrity constraints", "object references"],
+  "classes": [
+    {
+      "name": "KlantInfo",
+      "description": "Represents a customer with customer number, name, and address.",
+      "requirements": [
+        "Contains fields for klantnr (customer number), naam (name), and adres (address).",
+        "Provides suitable constructor and getters."
+      ],
+      "methods": []
+    },
+    {
+      "name": "OrderInfo",
+      "description": "Represents an order with order number, description, and the customer number of the client placing the order.",
+      "requirements": [
+        "Contains fields for ordernr (order number), omschrijving (description), and klantnr.",
+        "Provides suitable constructor and getters."
+      ],
+      "methods": []
+    },
+    {
+      "name": "Database",
+      "description": "Simulates a relational database with customer and order tables using HashMaps.",
+      "requirements": [
+        "Maintains two HashMaps: one for klanten (customer records) and one for orders.",
+        "Primary keys are klantnr and ordernr respectively.",
+        "Enforces primary key constraints and referential integrity.",
+        "Prints error messages when operations cannot be completed."
+      ],
+      "methods": [
+        {
+          "name": "voegKlantToe(KlantInfo klant)",
+          "description": "Adds a new customer if the klantnr does not already exist."
+        },
+        {
+          "name": "voegOrderToe(OrderInfo order)",
+          "description": "Adds a new order if the ordernr is unique and the klantnr exists."
+        },
+        {
+          "name": "printLijstOrders()",
+          "description": "Prints a list of all orders along with the corresponding customer name and order description (join)."
+        },
+        {
+          "name": "verwijderOrder(int ordernr)",
+          "description": "Removes an order by order number."
+        },
+        {
+          "name": "verwijderKlant(int klantnr)",
+          "description": "Removes a customer only if they have no associated orders."
+        }
+      ],
+      "test_flow": [
+        "Create a Database object.",
+        "Add one or more customers with unique klantnr values.",
+        "Add valid orders linked to existing customers.",
+        "Attempt to add an order with a non-existent klantnr and observe error.",
+        "Print list of orders with customer names.",
+        "Remove an order, then try to remove the associated customer.",
+        "Try to remove a customer with existing orders and verify error is shown."
+      ]
+    }
+  ],
+  "constraints": [
+    "Each klantnr and ordernr must be unique (primary key constraint).",
+    "An order's klantnr must refer to an existing customer (referential integrity).",
+    "Klant can only be removed if they have no linked orders.",
+    "Error messages must be printed if an operation fails."
   ]
 }
