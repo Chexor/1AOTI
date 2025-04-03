@@ -1,0 +1,142 @@
+{
+  "_meta": {
+    "instructions": "GPT: This file stores structured, detailed descriptions of each Java course exercise. Each entry contains a unique 'id', title, subjects, class specifications, task flow, constraints, and a summary of the exercise's intent. Use this data to answer questions about the purpose, structure, or complexity of exercises. Do not modify this file directly. When the user uploads a new exercise (as a PDF), analyze its contents and generate a new JSON object in the same format as existing entries, so the user can manually copy it into this file. Use the filename to extract the 'id' and 'title'. Determine applicable subjects from the content, using the same glossary as found in the progress tracking file (JavaProgress.json). All field names and structures must be consistent. Use arrays for subjects, classes, tasks, and constraints. Be precise and structured. Avoid summarizing unless specifically asked — output only the raw JSON entry for new exercises, correctly formatted and indented for easy insertion."
+  },
+  "exercises": [
+    {
+      "id": "H6.1",
+      "title": "LageEmissieZone",
+      "summary": "Simulate a system that determines whether vehicles are allowed access to a low-emission zone (LEZ) in Antwerp based on their fuel type and Euro norm. The system allows registration and deregistration of vehicles by number plate and checks access rules efficiently.",
+      "subjects": ["Object-Oriented Programming", "HashMaps", "String Processing"],
+      "classes": [
+        {
+          "name": "Auto",
+          "description": "Represents a vehicle with emission-related attributes.",
+          "requirements": [
+            "Fields: nummerplaat (String), merk (String), kleur (String), euronorm (int), brandstof (String: 'Diesel', 'Benzine', or 'Elektrisch')",
+            "Objects are immutable after construction",
+            "Constructor initializes all fields"
+          ]
+        },
+        {
+          "name": "LezChecker",
+          "description": "Central logic to determine if a vehicle is allowed in the Antwerp LEZ.",
+          "requirements": [
+            "Efficient vehicle lookup by nummerplaat (use HashMap)",
+            "inschrijvenAuto(Auto auto): adds vehicle to registry",
+            "uitschrijvenAuto(String nummerplaat): removes vehicle from registry",
+            "controleerLezAntwerpen(String nummerplaat): returns one of: 'Toegang', 'Toegang met LEZ-dagpas', 'Toegang na betaling', or 'Nummerplaat onbekend'"
+          ],
+          "access_policy": [
+            "Elektrisch → always allowed",
+            "Diesel / Benzine → depends on Euro norm",
+            "Unknown plate → return 'Nummerplaat onbekend'"
+          ],
+          "performance": "Lookup must be fast and reliable, as the system simulates millions of registered vehicles"
+        },
+        {
+          "name": "Hoofdklasse",
+          "description": "The main test class for creating and evaluating cars.",
+          "test_flow": [
+            "Create ~7 Auto instances with varied Euro norms and fuels",
+            "Register all vehicles with LezChecker",
+            "Use controleerLezAntwerpen() to check each vehicle’s LEZ access",
+            "Unregister one vehicle using uitschrijvenAuto()",
+            "Recheck the LEZ access for the unregistered vehicle"
+          ]
+        }
+      ],
+      "constraints": [
+        "Fuel types must be limited to Diesel, Benzine, or Elektrisch",
+        "Euro norms must be integers between 1 and 6",
+        "Every number plate is unique — only one Auto per plate",
+        "HashMap should be used for fast lookup of vehicles"
+      ]
+    },
+    {
+      "id": "H6.2",
+      "title": "BibliotheekMetHash",
+      "summary": "Simulate a library system using custom classes and hash-based data structures. The system handles book lending, returning, and member management using containers such as HashMaps and HashSets.",
+      "subjects": ["Object-Oriented Programming", "HashMaps", "HashSets", "Collections"],
+      "classes": [
+        {
+          "name": "Lid",
+          "description": "Represents a library member with a unique ID. Stores the member's name, address, and municipality (all Strings).",
+          "requirements": [
+            "4-argument constructor for ID, name, address, municipality",
+            "Mutable address and municipality",
+            "Overrides toString()",
+            "Overrides equals() and hashCode() based only on 'id'"
+          ]
+        },
+        {
+          "name": "Boek",
+          "description": "Models a physical copy of a book with unique ID, title, author, and ISBN.",
+          "requirements": [
+            "4-argument constructor for ID (int), title, author, ISBN (all Strings)",
+            "Status field to track availability (available / borrowed)",
+            "Status is mutable; all other fields are immutable post-construction",
+            "Overrides toString()"
+          ]
+        },
+        {
+          "name": "Balie",
+          "description": "Handles all library operations and stores the collections of members, books, and active loans.",
+          "requirements": [
+            "Zero-argument constructor",
+            "Containers must enforce uniqueness for members and books",
+            "Books must be identified by their ID, not ISBN",
+            "Must use suitable collections for efficient lookup and uniqueness"
+          ],
+          "methods": [
+            {
+              "name": "toevoegenBoek(Boek boek)",
+              "description": "Adds a book to the library collection"
+            },
+            {
+              "name": "toevoegenLid(Lid lid)",
+              "description": "Adds a member to the membership collection"
+            },
+            {
+              "name": "ontleen(int boekId, Lid lid)",
+              "description": "Lends the book to the member; shows error if book is already borrowed; updates book status"
+            },
+            {
+              "name": "brengTerug(int boekId)",
+              "description": "Returns a borrowed book and updates its status"
+            },
+            {
+              "name": "printOverzichtGeleendeBoeken()",
+              "description": "Prints all books currently on loan"
+            },
+            {
+              "name": "printOverzichtAanwezigeBoeken()",
+              "description": "Prints all books currently available"
+            },
+            {
+              "name": "printOntleendeBoekenVanPersoon(String naam)",
+              "description": "Prints all books borrowed by a member using their name"
+            }
+          ]
+        },
+        {
+          "name": "Hoofdklasse",
+          "description": "The main class to test the system functionality.",
+          "test_flow": [
+            "Create ~10 Boek instances and ~8 Lid instances",
+            "Add all to a Balie instance using the appropriate methods",
+            "Perform several loans and print overviews of borrowed/available books",
+            "Return some books and reprint updated overviews",
+            "Print all books borrowed by a specific member"
+          ]
+        }
+      ],
+      "constraints": [
+        "Use HashMaps and HashSets for fast lookup and uniqueness",
+        "Multiple books can share the same ISBN but must have unique IDs",
+        "Each member can borrow multiple books",
+        "Prevent duplicate members or books in their respective collections"
+      ]
+    }
+  ]
+}
