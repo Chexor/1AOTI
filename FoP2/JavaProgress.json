@@ -33,6 +33,11 @@
       "title": "BibliotheekMetHash",
       "subjects": ["Object-Oriented Programming", "HashMaps", "HashSets", "Collections"],
       "status": "In Progress"
-    }
+    },
+    {
+      "id": "H6.3",
+      "title": "Vertaler",
+      "subjects": ["hashmap", "collections", "random", "classes", "string processing"],
+      "status": "Not Started"
   ]
 }
