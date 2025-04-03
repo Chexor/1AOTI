@@ -139,7 +139,7 @@
       ]
     },
       {
-  "id": "6.3",
+  "id": "H6.3",
   "title": "De Vertaler",
   "summary": "Implement a translation system using a dictionary class that maps Dutch words to multiple English translations, and a translator class that processes a sentence.",
   "subjects": ["hashmap", "collections", "random", "classes", "string processing"],
