@@ -137,6 +137,94 @@
         "Each member can borrow multiple books",
         "Prevent duplicate members or books in their respective collections"
       ]
+    },
+      {
+  "id": "6.3",
+  "title": "De Vertaler",
+  "summary": "Implement a translation system using a dictionary class that maps Dutch words to multiple English translations, and a translator class that processes a sentence.",
+  "subjects": ["hashmap", "collections", "random", "classes", "string processing"],
+  "classes": [
+    {
+      "name": "Woordenboek",
+      "description": "Represents a dictionary mapping Dutch words to lists of English translations.",
+      "requirements": [
+        "Use a HashMap<String, List<String>> to store word translations.",
+        "Use a Random object to select random translations.",
+        "Add a method to add a translation for a given word.",
+        "If a word already exists, append the new translation; otherwise, add a new entry.",
+        "Add a method to return a random translation for a given word."
+      ],
+      "methods": [
+        {
+          "name": "Woordenboek()",
+          "description": "Initializes the dictionary and random number generator."
+        },
+        {
+          "name": "voegVertalingToe(String nederlands, String engels)",
+          "description": "Adds a translation for the given Dutch word to the dictionary."
+        },
+        {
+          "name": "geefVertaling(String nederlands)",
+          "description": "Returns a random English translation for the given Dutch word."
+        }
+      ],
+      "test_flow": [
+        "Create a Woordenboek object.",
+        "Add multiple English translations for the Dutch word 'mooi'.",
+        "Add a single translation for 'kind'.",
+        "Retrieve translations for both words and verify random selection."
+      ]
+    },
+    {
+      "name": "Vertaler",
+      "description": "Translates sentences word by word using a Woordenboek.",
+      "requirements": [
+        "Takes a Woordenboek object as constructor parameter.",
+        "Splits the input string into individual words using String.split().",
+        "Translates each word using Woordenboek.",
+        "Combines translated words into a final string."
+      ],
+      "methods": [
+        {
+          "name": "Vertaler(Woordenboek wb)",
+          "description": "Constructs a Vertaler using the provided Woordenboek."
+        },
+        {
+          "name": "vertaal(String zin)",
+          "description": "Translates the input sentence word by word using the Woordenboek."
+        }
+      ],
+      "test_flow": [
+        "Create a Vertaler object with a populated Woordenboek.",
+        "Translate the sentence 'mooi kind'.",
+        "Verify output is a combination of random translations."
+      ]
+    },
+    {
+      "name": "Hoofdklasse",
+      "description": "Main class to demonstrate dictionary-based translation.",
+      "requirements": [
+        "Creates and populates a Woordenboek.",
+        "Creates a Vertaler using the Woordenboek.",
+        "Translates the phrase 'mooi kind' and prints the result."
+      ],
+      "methods": [
+        {
+          "name": "main(String[] args)",
+          "description": "Runs the demo with example input and prints translated sentence."
+        }
+      ],
+      "test_flow": [
+        "Run the program and observe a translation of 'mooi kind' printed to the console."
+      ]
     }
+  ],
+  "constraints": [
+    "Translations must be randomly chosen from available options for each word.",
+    "Do not modify String.split() behavior—assume words are space-separated.",
+    "Use only Java standard library classes (e.g., HashMap, ArrayList, Random)."
+  ]
+}
+
   ]
 }
