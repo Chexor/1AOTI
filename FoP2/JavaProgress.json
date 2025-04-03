@@ -1,15 +1,13 @@
-[
-  {
-    "id": "H6.1",
-    "title": "LageEmissieZone",
-    "subjects": ["HashMaps"],
-    "completed": true
+{
+  "_meta": {
+    "instructions": "GPT: Use these rules when formatting or analyzing exercise entries. Each entry must include: id (e.g. 'H6.3'), title, subjects (array of strings), status (string: 'Not Started', 'In Progress', or 'Completed'). Your top priority is to track progress *by subject*. The id comes from the filename (e.g. 'H6.3_LageEmissieZone.java'), and title from the filename too. Analyze the content of the uploaded PDF to determine the most relevant course subjects. Use the chapter number in the id to support inference. All subject names must be standardized, capitalized, and meaningful (e.g. 'HashMaps', 'Recursion', 'Sorting Algorithms'). An exercise may include multiple subjects. Default status to 'Completed' unless told otherwise. Output valid JSON objects for copy-paste. Do not include comments or extra explanation in the JSON. When reporting progress, prioritize summaries grouped by subject. \n\nWhen the user uploads a PDF file, follow these steps:\n\n1. Extract the filename and use it to determine:\n   - id → everything before the first underscore (e.g. 'H6.1')\n   - title → everything after the underscore, with underscores removed and capitalization preserved (e.g. 'LageEmissieZone')\n\n2. Analyze the contents of the PDF:\n   - Identify programming concepts used in the assignment (e.g. class definitions, object storage, algorithms, file I/O, control flow).\n   - Infer subjects from those concepts using standardized labels such as:\n     - 'Object-Oriented Programming'\n     - 'HashMaps'\n     - 'Recursion'\n     - 'Conditionals'\n     - 'Loops'\n     - 'String Processing'\n     - 'File I/O'\n     - etc.\n\n3. Construct a new JSON object using this structure:\n{\n  \"id\": \"H6.1\",\n  \"title\": \"LageEmissieZone\",\n  \"subjects\": [\"HashMaps\"],\n  \"status\": \"Completed\"\n}\n\n- Use 'Completed' as the default status unless told otherwise.\n- Output only the raw JSON block, with proper formatting and indentation. No extra text or comments."
   },
-  {
-    "id": "H6.2",
-    "title": "BibliotheekMetHash",
-    "subjects": ["HashMaps, HashLists"],
-    "completed": false
-  },
-  
-]
+  "exercises": [
+    {
+      "id": "H6.1",
+      "title": "LageEmissieZone",
+      "subjects": ["Object-Oriented Programming", "HashMaps", "String Processing"],
+      "status": "Completed"
+    }
+  ]
+}
