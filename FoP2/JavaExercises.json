@@ -297,4 +297,60 @@
     "Klant can only be removed if they have no linked orders.",
     "Error messages must be printed if an operation fails."
   ]
+},
+{
+  "id": "H8.1_Jas",
+  "title": "Jas",
+  "summary": "Ontwerp een klasse Jas met maat, kleur en prijs, waarbij maat en kleur enumeraties zijn. De klasse moet een toString-methode hebben en gebruikt worden in een hoofdklasse met een ArrayList.",
+  "subjects": ["classes", "objects", "enums", "toString", "ArrayList", "main-method"],
+  "classes": [
+    {
+      "name": "Maat",
+      "description": "Enumeratie voor kledingmaten met bijhorende numerieke waarden.",
+      "requirements": ["S (38)", "M (40)", "L (42)", "XL (44)", "XXL (46)"],
+      "methods": [
+        {
+          "name": "getWaarde",
+          "description": "Geeft de numerieke waarde van de maat terug."
+        }
+      ],
+      "test_flow": []
+    },
+    {
+      "name": "Kleur",
+      "description": "Enumeratie voor mogelijke jas-kleuren.",
+      "requirements": ["ROOD", "BLAUW", "GROEN", "GRIJS", "BEIGE", "ZWART"],
+      "methods": [],
+      "test_flow": []
+    },
+    {
+      "name": "Jas",
+      "description": "Representatie van een jas met maat, kleur en prijs.",
+      "requirements": ["Constructor met maat, kleur en prijs", "toString methode met maat + waarde, kleur en prijs"],
+      "methods": [
+        {
+          "name": "toString",
+          "description": "Geeft de jasinformatie weer in een goed leesbaar formaat."
+        }
+      ],
+      "test_flow": [
+        "Maak een Jas met Maat.M, Kleur.BLAUW, prijs 79.99",
+        "Roep toString() aan en controleer of output correct is"
+      ]
+    },
+    {
+      "name": "Main",
+      "description": "Hoofdklasse die jassen beheert en weergeeft via een ArrayList.",
+      "requirements": ["Toont alle maten en waarden", "Toont alle kleuren", "Voegt 10 Jas-objecten toe aan een ArrayList", "Print alle jassen uit de lijst"],
+      "methods": [],
+      "test_flow": [
+        "Start het programma",
+        "Controleer console-uitvoer op maten en kleuren",
+        "Controleer dat 10 jassen worden aangemaakt en correct weergegeven"
+      ]
+    }
+  ],
+  "constraints": []
 }
+// INSERT NEXT ENTRY HERE
+
