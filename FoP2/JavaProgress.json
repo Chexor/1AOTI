@@ -44,6 +44,13 @@
       "id": "H6.4",
       "title": "Database",
       "subjects": ["hashmap", "collections", "classes", "integrity constraints", "object references"],
-      "status": "Not Started"
+      "status": "Completed"
+    },
+    {
+      "id": "H8.1_Jas",
+      "title": "Jas",
+      "subjects": ["classes", "objects", "enums", "toString", "ArrayList", "main-method"],
+      "status": "completed"
+    }
   ]
 }
