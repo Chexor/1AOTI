@@ -50,7 +50,13 @@
       "id": "H8.1_Jas",
       "title": "Jas",
       "subjects": ["classes", "objects", "enums", "toString", "ArrayList", "main-method"],
-      "status": "completed"
+      "status": "Completed"
+    },
+    {
+      "id": "H8.2_KrokoLoko",
+      "title": "Kroko Loko",
+      "subjects": ["random", "simulation", "classes", "objects", "arrays", "console-output", "game-logic"],
+      "status": "In progress"
     }
   ]
 }
