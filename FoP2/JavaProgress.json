@@ -57,6 +57,13 @@
       "title": "Kroko Loko",
       "subjects": ["random", "simulation", "classes", "objects", "arrays", "console-output", "game-logic"],
       "status": "In progress"
+    },
+    {
+      "id": "fop2-h09-watersportclub",
+      "title": "Watersportclub met zeil- en motorboten",
+      "subjects": ["inheritance", "overriding", "encapsulation", "polymorphism", "class design", "method implementation", "object interaction"],
+      "status": "unstarted"
     }
+
   ]
 }
