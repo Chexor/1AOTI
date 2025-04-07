@@ -351,6 +351,78 @@
     }
   ],
   "constraints": []
+},
+{
+  "id": "H9.1",
+  "title": "Watersportclub met zeil- en motorboten",
+  "summary": "Een uitbreiding van de vorige oefening over een watersportclub. Deze keer moeten er twee soorten boten (zeilboten en motorboten) worden beheerd met bijbehorende attributen zoals radar, GPS en fishfinder. Reservaties door leden moeten prijzen correct berekenen op basis van uren, boottype, opties, en ledenkorting.",
+  "subjects": ["inheritance", "overriding", "encapsulation", "polymorphism", "class design", "method implementation", "object interaction"],
+  "classes": [
+    {
+      "name": "Lid",
+      "description": "Vertegenwoordigt een lid van de watersportclub met naam, telefoonnummer en een aanpasbare korting.",
+      "requirements": [
+        "Naam en telefoonnummer zijn vast na creatie",
+        "Kortingspercentage moet aanpasbaar zijn"
+      ],
+      "methods": [
+        { "name": "getKorting", "description": "Geeft het kortingspercentage terug" },
+        { "name": "setKorting", "description": "Past het kortingspercentage aan" }
+      ],
+      "test_flow": ["Maak een lid aan", "Pas de korting aan", "Controleer getKorting"]
+    },
+    {
+      "name": "Boot",
+      "description": "Abstracte klasse met gemeenschappelijke velden voor zeil- en motorboten.",
+      "requirements": [
+        "Bevat naam, prijs per uur, en radar-optie",
+        "Berekening van toeslag voor radar (5%)"
+      ],
+      "methods": [
+        { "name": "getPrijsPerUur", "description": "Basisprijs inclusief opties berekenen (exclusief korting)" }
+      ],
+      "test_flow": ["Maak subklassen van Boot", "Test met radar true/false"]
+    },
+    {
+      "name": "Zeilboot",
+      "description": "Specifieke boot met optionele GPS (3%) en radar (5%).",
+      "requirements": [
+        "Erf van Boot",
+        "Bereken toeslag bij GPS en/of radar"
+      ],
+      "methods": [],
+      "test_flow": ["Instantieer met verschillende configuraties", "Controleer prijsberekening"]
+    },
+    {
+      "name": "Motorboot",
+      "description": "Specifieke boot met optionele fishfinder (7%) en radar (5%).",
+      "requirements": [
+        "Erf van Boot",
+        "Bereken toeslag bij fishfinder en/of radar"
+      ],
+      "methods": [],
+      "test_flow": ["Instantieer met verschillende opties", "Controleer prijsberekening"]
+    },
+    {
+      "name": "Reservatie",
+      "description": "Bevat een lid, een boot, en aantal uren.",
+      "requirements": [
+        "Aantal uren kan aangepast worden",
+        "Prijsberekening afhankelijk van boot, opties en ledenkorting"
+      ],
+      "methods": [
+        { "name": "getKostprijs", "description": "Bereken totale kostprijs rekening houdend met korting en opties" },
+        { "name": "setAantalUren", "description": "Pas het aantal reservatie-uren aan" }
+      ],
+      "test_flow": ["Maak reservaties", "Verander aantal uren", "Controleer kostprijs"]
+    }
+  ],
+  "constraints": [
+    "Gebruik overerving en method overriding",
+    "Gebruik encapsulatie voor velden",
+    "Bereken toeslagen en korting dynamisch",
+    "Gebruik polymorfisme bij prijsberekening van verschillende boottypes"
+  ]
 }
-// INSERT NEXT ENTRY HERE
+
 
