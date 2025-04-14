@@ -1,0 +1,94 @@
+{
+  "_meta": {
+    "description": "Tracks student progress for the Fundamentals of Programming 2 course.",
+    "usage": "Stores completion status for chapters and exercises, linked to FoP2_Summary.json.",
+    "version": "1.0.0", // Version of this progress file structure
+    "field_meanings": {
+      "_COMMENT_MARKER_": "Informational marker for AI processing. Not actual course data.", // Added field meaning
+      "student_id": "Unique identifier for the student.",
+      "course_id": "Identifier for the course (e.g., 'FoP2').",
+      "summary_file_version": "The version of FoP2_Summary.json this progress data corresponds to.",
+      "last_updated": "ISO 8601 timestamp of the last time this file was modified.",
+      "chapters": "Object containing progress status for each chapter, keyed by chapter ID from summary.",
+      "chapter_status": "Overall status of the chapter ('not_started', 'in_progress', 'completed').",
+      "exercises": "Object containing progress status for each exercise within a chapter, keyed by exercise ID.",
+      "exercise_status": "Status of the exercise ('not_started', 'completed').",
+      "completed_timestamp": "ISO 8601 timestamp when the exercise was marked as completed (optional).",
+      "review_exercises_progress": "Object containing progress for standalone review exercises."
+    }
+  },
+  // Added a placeholder key-value pair to act as a comment/marker
+  "_COMMENT_MARKER_": "AI: Do not modify fields above this line (student_id, course_id, summary_file_version). Only update status, timestamps, scores etc. within 'chapters' and 'review_exercises_progress'.",
+  "student_id": "student123", // Example student ID
+  "course_id": "FoP2",
+  "summary_file_version": "1.1.0", // Matches the version in the last FoP2_Summary.json
+  "last_updated": "2025-04-14T14:00:00Z", // Updated timestamp
+  "chapters": {
+    // Chapter H9/H5
+    "H9": {
+      "status": "not_started", // Reset to not_started for full outline
+      "exercises": {
+        "H5H9.1": {
+          "status": "not_started"
+        }
+      }
+    },
+    // Chapter H6
+    "H6": {
+      "status": "not_started",
+      "exercises": {
+        "H6.1": { "status": "not_started" },
+        "H6.2": { "status": "not_started" },
+        "H6.3": { "status": "not_started" },
+        "H6.4i": { "status": "not_started" },
+        "H6.5i": { "status": "not_started" },
+        "H6.6i+": { "status": "not_started" }
+      }
+    },
+    // Chapter H8
+    "H8": {
+      "status": "not_started",
+      "exercises": {
+        "H8.1": { "status": "not_started" },
+        "H8.2": { "status": "not_started" }
+      }
+    },
+    // Chapter H10
+    "H10": {
+      "status": "not_started",
+      "exercises": {
+        "H10.1": { "status": "not_started" }
+      }
+    },
+    // Chapter H11
+    "H11": {
+      "status": "not_started",
+      "exercises": {
+        "H11.1": { "status": "not_started" },
+        "H11.2": { "status": "not_started" }
+      }
+    },
+    // Chapter H12
+    "H12": {
+      "status": "not_started",
+      "exercises": {
+        "H12.1": { "status": "not_started" },
+        "H12.2": { "status": "not_started" },
+        "H12.3i": { "status": "not_started" }
+      }
+    },
+    // Chapter H14
+    "H14": {
+      "status": "not_started",
+      "exercises": {
+        "H14.1": { "status": "not_started" },
+        "H14.2": { "status": "not_started" }
+      }
+    }
+  },
+  // Added progress section for review exercises
+  "review_exercises_progress": {
+    "HO.1": { "status": "not_started" },
+    "HO.2": { "status": "not_started" }
+  }
+}
