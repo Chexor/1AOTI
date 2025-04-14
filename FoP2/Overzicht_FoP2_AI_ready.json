@@ -1,0 +1,232 @@
+{
+  "course": "Fundamentals of Programming 2",
+  "chapters": [
+    {
+      "book_chapter": "H9",
+      "title": "Correct werkende objecten",
+      "course_chapter": "Cursus H5: Testen van Programma's",
+      "concepts": [
+        "Black-box testing",
+        "White-box testing",
+        "Boundary value analysis",
+        "Equivalence partitioning",
+        "JUnit framework",
+        "Test classes and methods",
+        "Fixtures",
+        "Creating effective test suites",
+        "Avoiding redundant cases",
+        "Careful test data selection",
+        "IntelliJ debugger",
+        "Assertions",
+        "Reliability",
+        "Maintainability",
+        "Usability",
+        "Efficiency"
+      ],
+      "exercises": [
+        {
+          "id": "H5H9.1",
+          "title": "Testen"
+        }
+      ]
+    },
+    {
+      "book_chapter": "H6",
+      "title": "Geavanceerdere werking",
+      "concepts": [
+        "Java standard library",
+        "ArrayList",
+        "HashMap",
+        "HashSet",
+        "Generics",
+        "Random class",
+        "Javadoc",
+        "Access modifiers",
+        "Static methods and variables",
+        "Constants",
+        "Encapsulation",
+        "Maps",
+        "Sets",
+        "String processing",
+        "Wrapper types"
+      ],
+      "exercises": [
+        {
+          "id": "H6.1",
+          "title": "LageEmissieZone"
+        },
+        {
+          "id": "H6.2",
+          "title": "Bibliotheek"
+        },
+        {
+          "id": "H6.3",
+          "title": "Vertaler"
+        },
+        {
+          "id": "H6.4i",
+          "title": "Database"
+        },
+        {
+          "id": "H6.5i",
+          "title": "Lotto"
+        },
+        {
+          "id": "H6.6i+",
+          "title": "Balls"
+        }
+      ]
+    },
+    {
+      "book_chapter": "H8",
+      "title": "Klassen Ontwerpen",
+      "concepts": [
+        "Low coupling",
+        "High cohesion",
+        "Single Responsibility Principle",
+        "Refactoring",
+        "Code duplication",
+        "Encapsulation",
+        "Responsibility-driven design",
+        "HashMap",
+        "ArrayList",
+        "Enums",
+        "Design maintainability"
+      ],
+      "exercises": [
+        {
+          "id": "H8.1",
+          "title": "Jas"
+        },
+        {
+          "id": "H8.2",
+          "title": "KrokoLoko"
+        }
+      ]
+    },
+    {
+      "book_chapter": "H10",
+      "title": "De structuur verbeteren met overerving",
+      "concepts": [
+        "Inheritance",
+        "Class hierarchies",
+        "IS-A relationship",
+        "Polymorphism",
+        "Constructor chaining",
+        "Access modifiers",
+        "Type casting",
+        "Object class inheritance",
+        "Collection hierarchies"
+      ],
+      "exercises": [
+        {
+          "id": "H10.1",
+          "title": "Watersportclub_Zeil-enMotorboten"
+        }
+      ]
+    },
+    {
+      "book_chapter": "H11",
+      "title": "Meer over overerving",
+      "concepts": [
+        "Static vs dynamic types",
+        "Method overriding",
+        "Dynamic method lookup",
+        "super method calls",
+        "Object methods",
+        "Protected access",
+        "instanceof",
+        "Replacing type checks with polymorphism"
+      ],
+      "exercises": [
+        {
+          "id": "H11.1",
+          "title": "Watersportclub_GoudenLeden"
+        },
+        {
+          "id": "H11.2",
+          "title": "Landbouw"
+        }
+      ]
+    },
+    {
+      "book_chapter": "H12",
+      "title": "Meer abstractietechnieken",
+      "concepts": [
+        "Abstract classes",
+        "Abstract methods",
+        "Polymorphism via abstraction",
+        "Code refactoring",
+        "Interfaces",
+        "Interface inheritance",
+        "Interfaces as types",
+        "Abstract class vs interface",
+        "Comparable interface"
+      ],
+      "exercises": [
+        {
+          "id": "H12.1",
+          "title": "Landbouw_MetSchapen"
+        },
+        {
+          "id": "H12.2",
+          "title": "Watersportclub_Pedalo"
+        },
+        {
+          "id": "H12.3i",
+          "title": "Tienkamp"
+        }
+      ]
+    },
+    {
+      "book_chapter": "H14",
+      "title": "Foutafhandeling",
+      "concepts": [
+        "Defensive programming",
+        "Exception handling",
+        "Checked vs unchecked exceptions",
+        "Throwing exceptions",
+        "Custom exceptions",
+        "Exception propagation",
+        "Multi-catch",
+        "Finally block",
+        "Error communication"
+      ],
+      "exercises": [
+        {
+          "id": "H14.1",
+          "title": "Watersportclub_MetExceptions"
+        },
+        {
+          "id": "H14.2",
+          "title": "Exceptions"
+        }
+      ]
+    }
+  ],
+  "core_concepts": {
+    "Object-Oriented Design": [
+      "Encapsulation & Class Design",
+      "Inheritance & Polymorphism",
+      "Interfaces & Abstraction"
+    ],
+    "Libraries & Data Structures": [
+      "Standard Library & APIs",
+      "Enums & Design Patterns"
+    ],
+    "Testing & Robustness": [
+      "Testing & Debugging",
+      "Error Handling"
+    ]
+  },
+  "review_exercises": [
+    {
+      "id": "HO.1",
+      "title": "Kinderopvang"
+    },
+    {
+      "id": "HO.2",
+      "title": "Rekening"
+    }
+  ]
+}
