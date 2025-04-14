@@ -1,6 +1,208 @@
 {
+  "_meta": {
+    "description": "Structured summary of the Fundamentals of Programming 2 course.",
+    "usage": "Each 'chapter' includes key concepts, objectives, time estimates, and exercises. Exercises contain tags, difficulty levels, learning goals, support levels, types, and dependencies.",
+    "version": "1.1.0",
+    "author": "Tim K. - Chexor",
+    "last_updated": "2025-04-14",
+    "role": "Course structure summary, part of a 3-file system.",
+    "related_files": { 
+      "exercise_details": "FoP2_Exercises.json",
+      "student_progress": "FoP2_Progress.json"
+    },
+    "support_levels": {
+      "guided": "Exercise is covered in class. Not expected to be solved independently.",
+      "independent": "Exercise for practice. Student is expected to attempt it independently.",
+      "challenge": "Advanced exercise with additional difficulty."
+    },
+    "field_meanings": {
+      "role": "Describes the purpose of this file within a larger system.",
+      "related_files": "Object indicating expected names/roles of companion files.",
+      "book_chapter": "Corresponding chapter in the primary textbook.",
+      "course_chapter": "Corresponding chapter/module in the course structure.",
+      "title": "Name of the chapter.",
+      "concepts": "List of key technical topics covered in the chapter.",
+      "objectives": "List of high-level learning objectives for the chapter.",
+      "prerequisites": "List of required prior knowledge or completed chapters/exercises.",
+      "estimated_hours": "Estimated time in hours to complete the chapter content and exercises.",
+      "exercises": "List of exercises associated with the chapter.",
+      "tags": "Key technical concepts required in the exercise.",
+      "difficulty": "Estimated complexity (easy, medium, hard).",
+      "estimated_minutes": "Suggested time to complete the exercise.",
+      "learning_goals": "Natural language description of what the student should learn.",
+      "support_level": "How much guidance a student typically needs for this exercise.",
+      "exercise_type": "The nature of the exercise (e.g., coding, debugging, design).",
+      "depends_on": "List of exercise IDs that should ideally be completed before starting this one."
+    }
+  },
   "course": "Fundamentals of Programming 2",
-  "chapters": [],
+  "prerequisites": ["Fundamentals of Programming 1", "Basic Java Syntax"],
+  "required_software": ["JDK 11+", "IntelliJ IDEA Community Edition", "JUnit 5"],
+  "chapters": [
+    {
+      "book_chapter": "H9",
+      "title": "Correct werkende objecten",
+      "course_chapter": "Cursus H5: Testen van Programma's",
+      "objectives": [
+        "Understand the principles of software testing.",
+        "Learn to use the JUnit framework for unit testing.",
+        "Develop skills in debugging Java programs."
+      ],
+      "estimated_hours": 6,
+      "concepts": [
+        "Black-box testing", "White-box testing",
+        "Boundary value analysis", "Equivalence partitioning",
+        "JUnit framework", "Test classes and methods", "Fixtures",
+        "Creating effective test suites", "Avoiding redundant cases",
+        "Careful test data selection", "IntelliJ debugger",
+        "Assertions", "Reliability", "Maintainability", "Usability", "Efficiency"
+      ],
+      "exercises": [
+        {
+          "id": "H5H9.1",
+          "title": "Testen",
+          "tags": ["JUnit", "black-box", "debugging"],
+          "difficulty": "medium",
+          "estimated_minutes": 30,
+          "learning_goals": [
+            "Understand how to design black-box test cases",
+            "Write JUnit test methods for core functionality",
+            "Use the IntelliJ debugger to analyze program flow"
+          ],
+          "support_level": "guided",
+          "exercise_type": "testing",
+          "depends_on": []
+        }
+      ]
+    },
+    {
+      "book_chapter": "H6",
+      "title": "Geavanceerdere werking",
+      "objectives": [
+        "Utilize common Java Standard Library classes (Collections, Random).",
+        "Understand and apply generics.",
+        "Properly document code using Javadoc.",
+        "Apply encapsulation and access modifiers correctly."
+      ],
+      "estimated_hours": 8,
+      "concepts": [
+        "Java standard library", "ArrayList", "HashMap", "HashSet",
+        "Generics", "Random class", "Javadoc", "Access modifiers",
+        "Static methods and variables", "Constants", "Encapsulation",
+        "Maps", "Sets", "String processing", "Wrapper types"
+      ],
+      "exercises": [
+        {"id": "H6.1", "title": "LageEmissieZone", "tags": ["encapsulation", "javadoc"], "difficulty": "easy", "estimated_minutes": 30, "learning_goals": ["Use encapsulation effectively", "Write Javadoc for public methods"], "support_level": "independent", "exercise_type": "coding", "depends_on": []},
+        {"id": "H6.2", "title": "Bibliotheek", "tags": ["collections", "generics"], "difficulty": "medium", "estimated_minutes": 40, "learning_goals": ["Use HashMap and generics to store data"], "support_level": "independent", "exercise_type": "coding", "depends_on": []},
+        {"id": "H6.3", "title": "Vertaler", "tags": ["map", "input handling"], "difficulty": "easy", "estimated_minutes": 25, "learning_goals": ["Translate input using a key-value structure"], "support_level": "independent", "exercise_type": "coding", "depends_on": []},
+        {"id": "H6.4i", "title": "Database", "tags": ["hashmap", "encapsulation"], "difficulty": "medium", "estimated_minutes": 35, "learning_goals": ["Model data using a map structure"], "support_level": "independent", "exercise_type": "coding", "depends_on": ["H6.2"]},
+        {"id": "H6.5i", "title": "Lotto", "tags": ["random", "arrays"], "difficulty": "medium", "estimated_minutes": 30, "learning_goals": ["Generate random values and store in arrays"], "support_level": "independent", "exercise_type": "coding", "depends_on": []},
+        {"id": "H6.6i+", "title": "Balls", "tags": ["arraylist", "static"], "difficulty": "hard", "estimated_minutes": 45, "learning_goals": ["Track multiple objects using collections"], "support_level": "challenge", "exercise_type": "coding", "depends_on": []}
+      ]
+    },
+    {
+      "book_chapter": "H8",
+      "title": "Klassen Ontwerpen",
+      "objectives": [
+        "Understand principles of good class design (coupling, cohesion, SRP).",
+        "Learn techniques for refactoring code.",
+        "Apply responsibility-driven design."
+      ],
+      "estimated_hours": 7,
+      "concepts": [
+        "Low coupling", "High cohesion", "Single Responsibility Principle",
+        "Refactoring", "Code duplication", "Encapsulation",
+        "Responsibility-driven design", "HashMap", "ArrayList",
+        "Enums", "Design maintainability"
+      ],
+      "exercises": [
+        {"id": "H8.1", "title": "Jas", "tags": ["responsibility", "enum"], "difficulty": "medium", "estimated_minutes": 35, "learning_goals": ["Apply SRP and encapsulate object state"], "support_level": "independent", "exercise_type": "design", "depends_on": []},
+        {"id": "H8.2", "title": "KrokoLoko", "tags": ["refactoring", "cohesion"], "difficulty": "medium", "estimated_minutes": 35, "learning_goals": ["Refactor classes for better cohesion"], "support_level": "independent", "exercise_type": "refactoring", "depends_on": []}
+      ]
+    },
+    {
+      "book_chapter": "H10",
+      "title": "De structuur verbeteren met overerving",
+      "prerequisites": ["Chapter H8 Concepts"],
+      "objectives": [
+        "Understand and implement inheritance hierarchies.",
+        "Apply polymorphism using superclasses.",
+        "Recognize IS-A relationships."
+      ],
+      "estimated_hours": 6,
+      "concepts": [
+        "Inheritance", "Class hierarchies", "IS-A relationship",
+        "Polymorphism", "Constructor chaining", "Access modifiers",
+        "Type casting", "Object class inheritance", "Collection hierarchies"
+      ],
+      "exercises": [
+        {"id": "H10.1", "title": "Watersportclub_Zeil-enMotorboten", "tags": ["inheritance", "polymorphism"], "difficulty": "medium", "estimated_minutes": 40, "learning_goals": ["Create and use a superclass for similar objects"], "support_level": "independent", "exercise_type": "coding", "depends_on": []}
+      ]
+    },
+    {
+      "book_chapter": "H11",
+      "title": "Meer over overerving",
+      "prerequisites": ["Chapter H10 Concepts"],
+      "objectives": [
+        "Understand dynamic method lookup and overriding.",
+        "Utilize protected access and the `super` keyword effectively.",
+        "Replace type checks with polymorphism."
+      ],
+      "estimated_hours": 6,
+      "concepts": [
+        "Static vs dynamic types", "Method overriding",
+        "Dynamic method lookup", "super method calls",
+        "Object methods", "Protected access", "instanceof",
+        "Replacing type checks with polymorphism"
+      ],
+      "exercises": [
+        {"id": "H11.1", "title": "Watersportclub_GoudenLeden", "tags": ["overriding", "access control"], "difficulty": "medium", "estimated_minutes": 35, "learning_goals": ["Override behavior and manage access levels"], "support_level": "independent", "exercise_type": "coding", "depends_on": ["H10.1"]},
+        {"id": "H11.2", "title": "Landbouw", "tags": ["type checking", "polymorphism"], "difficulty": "medium", "estimated_minutes": 35, "learning_goals": ["Use polymorphism instead of type checks"], "support_level": "independent", "exercise_type": "refactoring", "depends_on": ["H10.1"]}
+      ]
+    },
+    {
+      "book_chapter": "H12",
+      "title": "Meer abstractietechnieken",
+      "prerequisites": ["Chapter H11 Concepts"],
+      "objectives": [
+        "Implement abstract classes and methods.",
+        "Define and use interfaces for polymorphism.",
+        "Understand the differences between abstract classes and interfaces."
+      ],
+      "estimated_hours": 7,
+      "concepts": [
+        "Abstract classes", "Abstract methods",
+        "Polymorphism via abstraction", "Code refactoring",
+        "Interfaces", "Interface inheritance", "Interfaces as types",
+        "Abstract class vs interface", "Comparable interface"
+      ],
+      "exercises": [
+        {"id": "H12.1", "title": "Landbouw_MetSchapen", "tags": ["abstraction", "inheritance"], "difficulty": "medium", "estimated_minutes": 40, "learning_goals": ["Implement abstract methods"], "support_level": "independent", "exercise_type": "coding", "depends_on": ["H11.2"]},
+        {"id": "H12.2", "title": "Watersportclub_Pedalo", "tags": ["interfaces"], "difficulty": "medium", "estimated_minutes": 35, "learning_goals": ["Use interface-based polymorphism"], "support_level": "independent", "exercise_type": "coding", "depends_on": ["H11.1"]},
+        {"id": "H12.3i", "title": "Tienkamp", "tags": ["comparable", "interface"], "difficulty": "hard", "estimated_minutes": 45, "learning_goals": ["Implement Comparable to sort objects"], "support_level": "independent", "exercise_type": "coding", "depends_on": []}
+      ]
+    },
+    {
+      "book_chapter": "H14",
+      "title": "Foutafhandeling",
+      "objectives": [
+        "Understand different approaches to error handling.",
+        "Implement exception handling using try-catch blocks.",
+        "Define and throw custom exceptions."
+      ],
+      "estimated_hours": 5,
+      "concepts": [
+        "Defensive programming", "Exception handling",
+        "Checked vs unchecked exceptions", "Throwing exceptions",
+        "Custom exceptions", "Exception propagation",
+        "Multi-catch", "Finally block", "Error communication"
+      ],
+      "exercises": [
+        {"id": "H14.1", "title": "Watersportclub_MetExceptions", "tags": ["exception", "custom exception"], "difficulty": "medium", "estimated_minutes": 30, "learning_goals": ["Create and use custom exception classes"], "support_level": "independent", "exercise_type": "coding", "depends_on": ["H12.2"]},
+        {"id": "H14.2", "title": "Exceptions", "tags": ["try-catch", "exception handling"], "difficulty": "medium", "estimated_minutes": 30, "learning_goals": ["Handle runtime errors using structured try-catch blocks"], "support_level": "independent", "exercise_type": "coding", "depends_on": []}
+      ]
+    }
+  ],
   "core_concepts": {
     "Object-Oriented Design": [
       "Encapsulation & Class Design",
@@ -17,13 +219,7 @@
     ]
   },
   "review_exercises": [
-    {
-      "id": "HO.1",
-      "title": "Kinderopvang"
-    },
-    {
-      "id": "HO.2",
-      "title": "Rekening"
-    }
+    {"id": "HO.1", "title": "Kinderopvang", "support_level": "independent", "exercise_type": "coding", "depends_on": []},
+    {"id": "HO.2", "title": "Rekening", "support_level": "independent", "exercise_type": "coding", "depends_on": []}
   ]
 }
