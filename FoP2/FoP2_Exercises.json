@@ -31,6 +31,22 @@
     "testing_info": "Ensure all tests pass when run using the JUnit runner in IntelliJ. Aim for good code coverage.",
     "required_files": ["Calculator.java"]
   },
+  // Entry for H5H9.2
+   "H5H9.2": {
+    "id": "H5H9.2",
+    "title": "BreukenMetJUnitTest",
+    "detailed_description": "## Oefening: JUnit Omgeving Opzetten voor Breuken\n\nDeze oefening focust op het correct configureren van de ontwikkelomgeving (IntelliJ) voor het gebruik van JUnit 5.\n\n**Situatie:**\nJe krijgt een startproject (\"Blended Learning testen - BreukMetTest\") met daarin een klasse `Breuk.java` en een testklasse `BreukTest.java`. De testklasse `BreukTest.java` zal initieel niet compileren omdat de JUnit 5 library nog niet aan het project is toegevoegd.\n\n**Opdracht:**\n\n1.  Open het startproject \"Blended Learning testen - BreukMetTest\" in IntelliJ.\n2.  Navigeer naar de test-folder en open `BreukTest.java`.\n3.  Observeer de compileerfouten bij de `import` statements voor JUnit (`org.junit.jupiter...`).\n4.  Gebruik de functionaliteit van IntelliJ om de JUnit 5 library automatisch toe te voegen aan de classpath van het project. Volg de stappen zoals aangegeven in het PDF-document (rode lampje / Alt+Enter -> \"Add 'JUnit 5.x' to classpath\" -> Bevestig download).\n5.  Controleer dat de klasse `BreukTest.java` nu correct compileert zonder fouten.",
+    "starter_code": "```java\n// BreukTest.java (uit startproject, compileert initieel niet)\npackage be.vives.ti;\n\n// Deze imports geven initieel een foutmelding:\nimport org.junit.jupiter.api.BeforeEach;\nimport org.junit.jupiter.api.Test;\nimport static org.junit.jupiter.api.Assertions.assertEquals;\n\npublic class BreukTest {\n    private Breuk b1; // 3/4\n    private Breuk b2; // 1/2\n\n    @BeforeEach\n    public void setup() throws Exception {\n        b1 = new Breuk(3, 4);\n        b2 = new Breuk(1, 2);\n    }\n\n    @Test\n    public void testConstructor() {\n        // Bestaande testcode...\n    }\n\n    // Andere bestaande testmethodes...\n}\n\n// Breuk.java (uit startproject - structuur niet gespecificeerd in PDF)\n/*\npackage be.vives.ti;\npublic class Breuk {\n    // Attributen teller, noemer\n    // Constructor(teller, noemer)\n    // Methoden zoals plus, min, maal, deel, toString, ...\n}\n*/\n```",
+    "hints": [
+      "Zoek de rode onderlijning bij de `import org.junit.jupiter...` lijnen.",
+      "Plaats je cursor op de fout en gebruik de sneltoets (vaak Alt+Enter) of klik op het rode lampje om de suggesties te zien.",
+      "Kies de optie \"Add 'JUnit 5.x' to classpath\".",
+      "Bevestig het downloaden van de library via Maven in het dialoogvenster dat verschijnt."
+    ],
+    "solution": null, // De 'oplossing' is het correct uitvoeren van de IDE stappen.
+    "testing_info": "Het belangrijkste testcriterium is dat de klasse `BreukTest.java` compileert zonder fouten nadat de JUnit 5 library is toegevoegd. Optioneel kan je de testen in `BreukTest` uitvoeren om te zien of ze slagen (dit test de `Breuk` klasse zelf, wat niet het hoofddoel van deze specifieke setup-oefening is).",
+    "required_files": ["Breuk.java", "BreukTest.java", "(Startproject 'Blended Learning testen - BreukMetTest')"]
+  },
   // Entry for H6.1
   "H6.1": {
     "id": "H6.1",
