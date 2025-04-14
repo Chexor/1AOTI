@@ -1,0 +1,29 @@
+{
+  "course": "Fundamentals of Programming 2",
+  "chapters": [],
+  "core_concepts": {
+    "Object-Oriented Design": [
+      "Encapsulation & Class Design",
+      "Inheritance & Polymorphism",
+      "Interfaces & Abstraction"
+    ],
+    "Libraries & Data Structures": [
+      "Standard Library & APIs",
+      "Enums & Design Patterns"
+    ],
+    "Testing & Robustness": [
+      "Testing & Debugging",
+      "Error Handling"
+    ]
+  },
+  "review_exercises": [
+    {
+      "id": "HO.1",
+      "title": "Kinderopvang"
+    },
+    {
+      "id": "HO.2",
+      "title": "Rekening"
+    }
+  ]
+}
