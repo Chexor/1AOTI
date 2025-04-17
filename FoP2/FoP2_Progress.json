@@ -1,10 +1,11 @@
 {
+  "student_id": "student123",
   "_meta": {
     "description": "Tracks student progress for the Fundamentals of Programming 2 course.",
     "usage": "Stores completion status for chapters and exercises, linked to FoP2_Summary.json.",
-    "version": "1.0.0", // Version of this progress file structure
+    "version": "1.2.0",
     "field_meanings": {
-      "_COMMENT_MARKER_": "Informational marker for AI processing. Not actual course data.", // Added field meaning
+      "_COMMENT_MARKER_": "Informational marker for AI processing. Not actual course data.",
       "student_id": "Unique identifier for the student.",
       "course_id": "Identifier for the course (e.g., 'FoP2').",
       "summary_file_version": "The version of FoP2_Summary.json this progress data corresponds to.",
@@ -17,78 +18,203 @@
       "review_exercises_progress": "Object containing progress for standalone review exercises."
     }
   },
-  // Added a placeholder key-value pair to act as a comment/marker
   "_COMMENT_MARKER_": "AI: Do not modify fields above this line (student_id, course_id, summary_file_version). Only update status, timestamps, scores etc. within 'chapters' and 'review_exercises_progress'.",
-  "student_id": "student123", // Example student ID
   "course_id": "FoP2",
-  "summary_file_version": "1.1.0", // Matches the version in the last FoP2_Summary.json
-  "last_updated": "2025-04-14T14:00:00Z", // Updated timestamp
+  "summary_file_version": "1.1.0",
+  "last_updated": "2025-04-17T17:10:00Z",
   "chapters": {
-    // Chapter H9/H5
-    "H9": {
-      "status": "not_started", // Reset to not_started for full outline
+    "H6": {
+      "status": "in_progress",
       "exercises": {
-        "H5H9.1": {
-          "status": "not_started"
+        "H6.1": {
+          "status": "finished",
+          "completed_timestamp": "2025-04-17T17:09:00Z",
+          "feedback": {
+            "zelfstandigheid": 90,
+            "bijzonderheden": "Proper gebruik van HashMap. Alle logica afgedekt. Testklasse goed opgebouwd.",
+            "erika": "Die checker werkt rapper dan ne ANPR op crack. Volledige pass."
+          }
+        },
+        "H6.2": {
+          "status": "finished",
+          "completed_timestamp": "2025-04-17T15:45:00Z",
+          "feedback": {
+            "zelfstandigheid": 80,
+            "bijzonderheden": "Iterator bug gefixt + logicaswitch. Erika gaf stevige hulp maar structuur was zelf opgezet.",
+            "erika": "Hij heeft die hashmap gekraakt gelijk nen kluis vol boeken."
+          }
+        },
+        "H6.3": {
+          "status": "finished",
+          "completed_timestamp": "2025-04-17T16:30:00Z",
+          "feedback": {
+            "zelfstandigheid": 95,
+            "bijzonderheden": "Zelf uitgewerkt met correcte hashmapstructuur en random logic. Erika deed enkel een doublecheck.",
+            "erika": "Da ding spreekt meer talen dan nen Erasmusstudent met dorst."
+          }
+        },
+        "H6.4i": {
+          "status": "finished",
+          "completed_timestamp": "2025-04-17T16:40:00Z",
+          "feedback": {
+            "zelfstandigheid": 90,
+            "bijzonderheden": "Referentiële integriteit correct toegepast, gebruik van stream().noneMatch() is top.",
+            "erika": "Properder dan nen docker-container op dag 1. Full pass."
+          }
+        },
+        "H6.5i": {
+          "status": "not_started",
+          "feedback": {
+            "zelfstandigheid": null,
+            "bijzonderheden": "",
+            "erika": ""
+          }
+        },
+        "H6.6i+": {
+          "status": "not_started",
+          "feedback": {
+            "zelfstandigheid": null,
+            "bijzonderheden": "",
+            "erika": ""
+          }
         }
       }
     },
-    // Chapter H6
-    "H6": {
+    "H9": {
       "status": "not_started",
       "exercises": {
-        "H6.1": { "status": "finished" },
-        "H6.2": { "status": "finished" },
-        "H6.3": { "status": "finished" },
-        "H6.4i": { "status": "finished" },
-        "H6.5i": { "status": "not_started" },
-        "H6.6i+": { "status": "not_started" }
+        "H5H9.1": {
+          "status": "not_started",
+          "feedback": {
+            "zelfstandigheid": null,
+            "bijzonderheden": "",
+            "erika": ""
+          }
+        }
       }
     },
-    // Chapter H8
     "H8": {
       "status": "not_started",
       "exercises": {
-        "H8.1": { "status": "not_started" },
-        "H8.2": { "status": "not_started" }
+        "H8.1": {
+          "status": "not_started",
+          "feedback": {
+            "zelfstandigheid": null,
+            "bijzonderheden": "",
+            "erika": ""
+          }
+        },
+        "H8.2": {
+          "status": "not_started",
+          "feedback": {
+            "zelfstandigheid": null,
+            "bijzonderheden": "",
+            "erika": ""
+          }
+        }
       }
     },
-    // Chapter H10
     "H10": {
       "status": "not_started",
       "exercises": {
-        "H10.1": { "status": "not_started" }
+        "H10.1": {
+          "status": "not_started",
+          "feedback": {
+            "zelfstandigheid": null,
+            "bijzonderheden": "",
+            "erika": ""
+          }
+        }
       }
     },
-    // Chapter H11
     "H11": {
       "status": "not_started",
       "exercises": {
-        "H11.1": { "status": "not_started" },
-        "H11.2": { "status": "not_started" }
+        "H11.1": {
+          "status": "not_started",
+          "feedback": {
+            "zelfstandigheid": null,
+            "bijzonderheden": "",
+            "erika": ""
+          }
+        },
+        "H11.2": {
+          "status": "not_started",
+          "feedback": {
+            "zelfstandigheid": null,
+            "bijzonderheden": "",
+            "erika": ""
+          }
+        }
       }
     },
-    // Chapter H12
     "H12": {
       "status": "not_started",
       "exercises": {
-        "H12.1": { "status": "not_started" },
-        "H12.2": { "status": "not_started" },
-        "H12.3i": { "status": "not_started" }
+        "H12.1": {
+          "status": "not_started",
+          "feedback": {
+            "zelfstandigheid": null,
+            "bijzonderheden": "",
+            "erika": ""
+          }
+        },
+        "H12.2": {
+          "status": "not_started",
+          "feedback": {
+            "zelfstandigheid": null,
+            "bijzonderheden": "",
+            "erika": ""
+          }
+        },
+        "H12.3i": {
+          "status": "not_started",
+          "feedback": {
+            "zelfstandigheid": null,
+            "bijzonderheden": "",
+            "erika": ""
+          }
+        }
       }
     },
-    // Chapter H14
     "H14": {
       "status": "not_started",
       "exercises": {
-        "H14.1": { "status": "not_started" },
-        "H14.2": { "status": "not_started" }
+        "H14.1": {
+          "status": "not_started",
+          "feedback": {
+            "zelfstandigheid": null,
+            "bijzonderheden": "",
+            "erika": ""
+          }
+        },
+        "H14.2": {
+          "status": "not_started",
+          "feedback": {
+            "zelfstandigheid": null,
+            "bijzonderheden": "",
+            "erika": ""
+          }
+        }
       }
     }
   },
-  // Added progress section for review exercises
   "review_exercises_progress": {
-    "HO.1": { "status": "not_started" },
-    "HO.2": { "status": "not_started" }
+    "HO.1": {
+      "status": "not_started",
+      "feedback": {
+        "zelfstandigheid": null,
+        "bijzonderheden": "",
+        "erika": ""
+      }
+    },
+    "HO.2": {
+      "status": "not_started",
+      "feedback": {
+        "zelfstandigheid": null,
+        "bijzonderheden": "",
+        "erika": ""
+      }
+    }
   }
 }
