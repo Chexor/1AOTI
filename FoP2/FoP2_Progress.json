@@ -38,7 +38,7 @@
       "status": "not_started",
       "exercises": {
         "H6.1": { "status": "finished" },
-        "H6.2": { "status": "not_started" },
+        "H6.2": { "status": "finished" },
         "H6.3": { "status": "not_started" },
         "H6.4i": { "status": "not_started" },
         "H6.5i": { "status": "not_started" },
