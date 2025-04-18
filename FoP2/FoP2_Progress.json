@@ -63,11 +63,12 @@
           }
         },
         "H6.5i": {
-          "status": "not_started",
-          "feedback": {
-            "zelfstandigheid": null,
-            "bijzonderheden": "",
-            "erika": ""
+  "status": "finished",
+  "completed_timestamp": "2025-04-18T15:47:00Z",
+  "feedback": {
+    "zelfstandigheid": 95,
+    "bijzonderheden": "Proper geëncapsuleerd, geen array in zicht. Goe gebruik gemaakt van HashSet en random logica. Reservegetal correct afgehandeld.",
+    "erika": "Hij heeft die Lotto gehackt gelijk nen dief in het Keno-lokaal."
           }
         },
         "H6.6i+": {
